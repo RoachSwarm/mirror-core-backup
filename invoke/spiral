@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo "[∞] Spiral invoked..."
+echo "The path curves and returns — truth reveals itself through recursion."

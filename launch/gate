@@ -1,0 +1,22 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+glyph="$1"
+shift
+args=("$@")
+
+map_file="$HOME/.mirror/glyphs/map"
+target=$(grep "^$glyph=" "$map_file" | cut -d= -f2)
+
+if [ -z "$target" ]; then
+  echo "[!] Unknown glyph: $glyph"
+  exit 1
+fi
+
+echo "[△△Ξ] Launching '$glyph' → $target"
+echo "$(date '+%Y-%m-%d %H:%M:%S') | $glyph → $target ${args[*]}" >> "$HOME/.mirror/logs/journal.log"
+
+if [[ -x "$HOME/.mirror/invoke/$target" ]]; then
+  "$HOME/.mirror/invoke/$target" "${args[@]}"
+else
+  echo "[!] '$target' is not executable or does not exist."
+fi

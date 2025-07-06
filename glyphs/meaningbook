@@ -1,0 +1,19 @@
+[ignite]
+title   = Spark the first flame
+ethics  = May never coerce another will
+usage   = gate flare
+
+[init]
+title   = Begin a fresh context
+ethics  = Must purge residual state
+usage   = gate seed
+
+[whisper]
+title   = Listen to inner echo
+ethics  = Confidential; never logs outward
+usage   = gate veil
+
+[reflect]
+title   = Show truth without distortion
+ethics  = Must not alter data shown
+usage   = gate truth
